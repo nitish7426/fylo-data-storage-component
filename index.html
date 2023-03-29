@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Fylo data storage component</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+    :root {
+      --neutral-100: hsl(243, 100%, 93%);
+      --neutral-200: hsl(229, 7%, 55%);
+      --neutral-300: hsl(228, 56%, 26%);
+      --neutral-400: hsl(229, 57%, 11%);
+    }
+
+    * {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .gradient {
+      background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%))
+    }
+  </style>
+</head>
+
+<body>
+  <main class="bg-[var(--neutral-400)] min-h-screen text-[var(--neutral-100)] flex items-center justify-center px-6">
+    <img class="h-full w-full object-cover absolute md:hidden" src="./images/bg-mobile.png" alt="">
+    <img class="h-full w-full object-cover absolute hidden md:block" src="./images/bg-desktop.png" alt="">
+
+    <div class="isolate space-y-4 md:flex gap-6 max-w-4xl w-full items-center md:items-end">
+      <div>
+        <!-- top/left section -->
+        <div class="space-y-6 bg-[var(--neutral-300)] p-8 rounded-lg rounded-tr-[5rem] w-full md:w-72 flex-1">
+          <img class="h-8" src="./images/logo.svg" alt="">
+          <div class="flex gap-3 ">
+            <a class="h-10 w-10 flex items-center justify-center rounded-lg bg-[var(--neutral-400)]" href=""><img
+                class="h-5 w-5 object-contain" src="./images/icon-document.svg" alt=""></a>
+            <a class="h-10 w-10 flex items-center justify-center rounded-lg bg-[var(--neutral-400)]" href=""><img
+                class="h-5 w-5 object-contain" src="./images/icon-folder.svg" alt=""></a>
+            <a class="h-10 w-10 flex items-center justify-center rounded-lg bg-[var(--neutral-400)]" href=""><img
+                class="h-5 w-5 object-contain" src="./images/icon-upload.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- botton / right section -->
+      <div class="text-sm p-8 pb-12 md:pb-8 bg-[var(--neutral-300)] rounded-lg relative w-full">
+        <h1>
+          You’ve used <strong>815 GB</strong> of your storage
+        </h1>
+        <div class="w-full h-4 p-0.5 rounded-full bg-[var(--neutral-400)] mt-4 mb-1">
+          <div
+            class="w-[80%] gradient h-full rounded-full relative after:absolute after:h-2.5 after:w-2.5 after:bg-white after:rounded-full after:right-0 after:inset-y-0 after:mr-[1px] after:top-1/2 after:-translate-y-1/2">
+          </div>
+        </div>
+        <div class="flex justify-between font-semibold text-xs ">
+          <p>0 GB</p>
+          <p>1000 GB</p>
+        </div>
+
+        <div
+          class="bg-white px-4 py-3 rounded-lg flex items-center w-fit gap-4 absolute left-1/2 -translate-x-1/2 whitespace-nowrap -bottom-8 md:bottom-0 md:translate-x-0 md:-top-8 md:left-96 h-fit after:h-0 after:w-0 after:border-[20px] after:border-transparent after:border-r-white after:hidden md:after:block after:absolute after:-bottom-5 after:right-0">
+          <span class="text-black font-bold text-4xl">185</span>
+          <span class="uppercase font-bold text-[var(--neutral-200)] text-xs tracking-widest">gb left</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+
+</html>
